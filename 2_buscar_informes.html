@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buscar informes · JustiData Pericias</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<aside class="side">
+  <div class="brand"><strong>JustiData</strong><span>Gestión de pericias</span></div>
+  <nav>
+    <small>Pericias</small>
+    <a href="1_nuevo_informe.html">Nuevo informe</a>
+    <a href="2_buscar_informes.html" class="on">Buscar informes</a>
+    <small>Gestión</small>
+    <a href="#">Personas</a>
+    <a href="#">Actividades programadas</a>
+    <a href="#">Pagos y honorarios</a>
+    <a href="#">Reportes</a>
+  </nav>
+  <div class="session"><b>Lucía Fernández</b><span>Operador administrativo</span><br><a href="#">Cerrar sesión</a></div>
+</aside>
+
+<div class="main">
+  <div class="top">
+    <div class="crumbs"><a href="#">Inicio</a> / Informes / Buscar</div>
+    <div>Último acceso: 27/10/2026 08:42</div>
+  </div>
+
+  <main class="content">
+    <div class="head">
+      <div><h1>Buscar informes</h1><p>Filtrá por cualquiera de los campos. Podés combinarlos.</p></div>
+      <a class="btn" href="1_nuevo_informe.html">Nuevo informe</a>
+    </div>
+
+    <form class="card" onsubmit="return false">
+      <div class="grid">
+        <div class="c4"><label for="o">Organismo</label>
+          <select id="o"><option>Todos</option><option>Fiscalía de Instrucción N.º 2 – Paraná</option><option>Juzgado Civil y Comercial N.º 3 – Paraná</option><option>Juzgado de Familia N.º 1 – Oro Verde</option><option>Estudio Jurídico Ramírez &amp; Asociados</option></select></div>
+        <div class="c3"><label for="n">Número de pericia</label><input id="n" placeholder="Ej.: 0873/2026"></div>
+        <div class="c5" style="grid-column:span 5"><label for="e">Expediente o palabra clave</label><input id="e" placeholder="Apellido, carátula, descripción…"></div>
+        <div class="c3"><label for="t">Tipo de pericia</label>
+          <select id="t"><option>Todos</option><option>Médica</option><option>Psicológica</option><option>Informática</option><option>Contable</option><option>Accidentológica</option><option>Documentológica</option></select></div>
+        <div class="c3"><label for="s">Estado</label>
+          <select id="s"><option>Todos</option><option>Solicitada</option><option>En análisis</option><option>En proceso de evaluación</option><option>En elaboración de informe</option><option>Finalizada</option><option>Suspendida</option><option>Cancelada</option><option>Impugnada</option></select></div>
+        <div class="c3"><label for="p">Perito</label><input id="p" placeholder="Apellido o matrícula"></div>
+        <div class="c3"><label for="d">Presentación</label>
+          <select id="d"><option>Todas</option><option>Informe pericial</option><option>Ampliación de pericia</option></select></div>
+        <div class="c3"><label for="f1">Solicitada desde</label><input type="date" id="f1"></div>
+        <div class="c3"><label for="f2">Solicitada hasta</label><input type="date" id="f2"></div>
+        <div class="c6 actions" style="margin:0;align-self:end">
+          <button type="reset" class="btn ghost">Limpiar filtros</button>
+          <button type="submit" class="btn">Buscar</button>
+        </div>
+      </div>
+    </form>
+
+    <section class="card">
+      <div class="head" style="margin-bottom:12px">
+        <div><h2>Resultados</h2><p style="font-size:14px">8 de 37 informes · ordenados por fecha, más recientes primero</p></div>
+        <button class="btn ghost sm" type="button">Exportar listado</button>
+      </div>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>Pericia</th><th>Organismo</th><th>Tipo</th><th>Presentación</th><th>Fecha</th><th>Perito responsable</th><th>Estado</th><th></th></tr></thead>
+          <tbody>
+            <tr><td class="num">0873/2026</td><td>Fiscalía de Instrucción N.º 2</td><td>Psicológica</td><td>Informe pericial</td><td>28/10/2026</td><td>Lic. Carolina Benítez</td><td><span class="chip s-ela">En elaboración</span></td><td><a class="btn ghost sm" href="3_informe.html">Ver informe</a></td></tr>
+            <tr><td class="num">1245/2026</td><td>Juzgado Civil y Comercial N.º 3</td><td>Informática</td><td>Ampliación n.º 1</td><td>22/10/2026</td><td>Ing. Marcos Sosa</td><td><span class="chip s-eva">En evaluación</span></td><td><a class="btn ghost sm" href="3_informe.html">Ver informe</a></td></tr>
+            <tr><td class="num">0311/2026</td><td>Juzgado de Familia N.º 1</td><td>Médica</td><td>Informe pericial</td><td>15/10/2026</td><td>Dr. Pablo Olivera</td><td><span class="chip s-fin">Finalizada</span></td><td><a class="btn ghost sm" href="3_informe.html">Ver informe</a></td></tr>
+            <tr><td class="num">0098/2026</td><td>Estudio Ramírez &amp; Asoc.</td><td>Contable</td><td>Informe pericial</td><td>09/10/2026</td><td>Cdra. Julia Maidana</td><td><span class="chip s-fin">Finalizada</span></td><td><a class="btn ghost sm" href="3_informe.html">Ver informe</a></td></tr>
+            <tr><td class="num">0764/2026</td><td>Fiscalía de Instrucción N.º 2</td><td>Accidentológica</td><td>Ampliación n.º 2</td><td>01/10/2026</td><td>Ing. Hugo Salinas</td><td><span class="chip s-sus">Impugnada</span></td><td><a class="btn ghost sm" href="3_informe.html">Ver informe</a></td></tr>
+            <tr><td class="num">0652/2026</td><td>Juzgado Civil y Comercial N.º 3</td><td>Documentológica</td><td>Informe pericial</td><td>24/09/2026</td><td>Perito cal. Nora Acosta</td><td><span class="chip s-fin">Finalizada</span></td><td><a class="btn ghost sm" href="3_informe.html">Ver informe</a></td></tr>
+            <tr><td class="num">0540/2026</td><td>Juzgado de Familia N.º 1</td><td>Psicológica</td><td>Informe pericial</td><td>17/09/2026</td><td>Lic. Daniel Rossi</td><td><span class="chip s-ana">En análisis</span></td><td><a class="btn ghost sm" href="3_informe.html">Ver informe</a></td></tr>
+            <tr><td class="num">0487/2026</td><td>Estudio Ramírez &amp; Asoc.</td><td>Informática</td><td>Informe pericial</td><td>03/09/2026</td><td>Ing. Marcos Sosa</td><td><span class="chip s-sus">Suspendida</span></td><td><a class="btn ghost sm" href="3_informe.html">Ver informe</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="pager">
+        <span>Página 1 de 5</span>
+        <div><a href="#">Anterior</a><a href="#" class="on">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">Siguiente</a></div>
+      </div>
+    </section>
+  </main>
+  <footer class="foot">JustiData Solutions S.A. · Sistema de Gestión y Seguimiento de Pericias · v1.0 (maqueta)</footer>
+</div>
+</body>
+</html>
